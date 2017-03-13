@@ -1,14 +1,15 @@
-*{margin:0;padding: 0;box-sizing: border-box;}
+*{margin:0;padding: 0;box-sizing: border-box;font-family:  Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;}
 html{font-size: 16px}
 a{text-decoration:none;}
-body{margin-bottom:40px;}
+body{margin:40px 0 ;}
 header{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background-color: #0096ff;
-  height: 40px	
+  height: 40px	;
+
 }
 footer{
 	height: 40px;
@@ -25,6 +26,7 @@ footer{
     right: 0;
     border-top:1px solid #f4f4f4;
     font-size: 16px;
+    z-index: 10
 }
 footer a{
 	text-align: center;
@@ -35,7 +37,12 @@ footer a{
 .head-box{
 	background-color: #0096ff;
 	height: 40px;
-	padding: 5px 10px
+	padding: 5px 10px;
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
  }
 .head-box input{
 	height: 30px;
@@ -86,4 +93,21 @@ footer a{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: 80px;
+    padding: 10px 5px
+}
+.pro-item >div{
+    height: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 20px
+}
+.pro-item >div h3{
+    font-size: 16px
+}
+.pro-item >div span{
+    font-size: 12px;
+    padding-right: 10px
 }

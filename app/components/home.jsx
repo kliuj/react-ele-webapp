@@ -2,22 +2,30 @@ import React from 'react'
 import { render } from 'react-dom'
 import List from './common/scrollList.jsx'
 import Pro from './common/pro.jsx'
+import Send from '../utils/model.js'
 
 
 class Home extends React.Component{
 	constructor(){
 		super()
 		this.state  = {
-			productList :[1,2,3,4,5,6,7]
+			productList :[]
 		}
 	}
 	getMore(){
 		let self = this
-		// setInterval(function(){
-		// 	self.setState({
-		// 		productList:self.state.productList.concat([1,2,3,4,5,6,7])
-		// 	})
-		// },2000)
+		Send('hot_search_words',null,(data)=>{
+			this.setState({
+				productList:this.state.productList.concat(data)
+			})
+		})
+	}
+	componentWillMount() {
+		Send('hot_search_words',null,(data)=>{
+			this.setState({
+				productList:this.state.productList.concat(data)
+			})
+		})
 	}
 	render(){
 		return(
