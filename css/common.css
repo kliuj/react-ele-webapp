@@ -67,9 +67,9 @@ footer a{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 100px;
+    height: 90px;
     align-items: center;
-    padding:10px;
+    padding:5px 10px;
     border-bottom: 1px solid #eee;
 }
 .pro-img{

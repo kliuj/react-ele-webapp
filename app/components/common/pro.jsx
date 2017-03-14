@@ -5,10 +5,13 @@ class Pro extends React.Component {
 	constructor(){
 		super()
 	}
+	handelClick(){
+		console.log(121)
+	}
 	render(){
 		let props = this.props.data;
 		return(
-			<li className="pro">
+			<li className="pro" onClick={this.handelClick.bind(this)}>
 				<div className="pro-img" >
 					<img src={'https://fuss10.elemecdn.com/'+props.image_path.replace(/(\S\S\S)/,"$1/").replace(/(\S)/,"$1/").replace(/(jpeg|png)/,"$1.$1")} />
 				</div>

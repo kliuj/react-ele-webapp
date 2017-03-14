@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link,hashHistory ,IndexRedirect} from 'react-router'
+import { Router, Route, Link,hashHistory ,IndexRedirect,IndexRoute} from 'react-router'
 
 import Home from './components/home.jsx'
 import Discover from './components/discover.jsx'
@@ -27,6 +27,7 @@ const App = React.createClass({
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
+      <IndexRoute component={Home} />	
       <Route path="home" component={Home} />
       <Route path="discover" component={Discover} />
       <Route path="booklist" component={Booklist} />

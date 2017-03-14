@@ -3,21 +3,25 @@ import { render } from 'react-dom'
 
 const height = window.screen.height;
 let timeOut = null
+let self = null
 
 class List extends React.Component {
 	constructor(){
 		super()
+		self = this
 	}
 	componentDidMount(){
-		// 
-		
-		window.addEventListener('scroll',()=>{
-			timeOut && window.clearTimeout(timeOut)	
-			timeOut = setTimeout(()=>{
-				this.loadMore()
-			}, 200);
-		})
-
+		window.addEventListener('scroll',this.scrollLoad)
+	}
+	scrollLoad(){
+		timeOut && window.clearTimeout(timeOut)	
+		timeOut = setTimeout(function(){
+			self.loadMore()
+		}, 200);
+	}
+	componentWillUnmount(){
+		console.log(1212)
+		window.removeEventListener('scroll',this.scrollLoad)
 	}
 	loadMore(){
 		let y = window.scrollY,

@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 const Discover = React.createClass({
 	render(){
 		return(
-			<div>Discover</div>
+			<div style={{height:1000}}>Discover</div>
 		)
 	}
 })
