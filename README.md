@@ -1,6 +1,7 @@
 # react-ele-webapp
 react-ele-webapp
 
+完成一个基于react   react-router  redux 全家桶的完整项目
 react  redux react-router
 
 ##DAY 1
