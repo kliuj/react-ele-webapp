@@ -1,12 +1,20 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { hashHistory } from 'react-router'
 
-const Header = React.createClass({
+export class Header extends React.Component{
+	constructor(props) {
+		super(props);
+		
+	}
+	goback(){
+		hashHistory.push('/')
+	}
 	render(){
 		return(
 			<header>
-				
+				<div className="back" onClick={this.goback.bind(this)}></div>
+				<p>{this.props.title}</p>
 			</header>
 		)
 	}
-})
+}

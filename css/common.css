@@ -1,15 +1,20 @@
 *{margin:0;padding: 0;box-sizing: border-box;font-family:  Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;}
 html{font-size: 16px}
 a{text-decoration:none;}
-body{margin:40px 0 ;}
 header{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background-color: #0096ff;
-  height: 40px	;
-
+  height: 40px	; 
+}
+header p{
+  color:#fff;  
+  line-height: 40px;
+  text-align: center;
+  padding: 0 40px; 
+  width: 100%
 }
 footer{
 	height: 40px;
@@ -51,6 +56,9 @@ footer a{
 	width: 100%;
 	padding: 0 5px;
 	outline: none
+}
+.content{
+    margin: 40px 0;
 }
 .hot-title{
 	font-size: 12px;
@@ -102,12 +110,31 @@ footer a{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    line-height: 20px
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .pro-item >div h3{
     font-size: 16px
 }
 .pro-item >div span{
     font-size: 12px;
-    padding-right: 10px
+    padding-right: 10px;
+    height: 20px;
+}
+.back{
+    height: 40px;
+    width: 40px;
+    padding: 13px;
+    position: absolute;
+}
+.back::after{
+    content:' ';
+    display: block;
+    height: 14px;
+    width:14px;
+    border:2px solid #fff;
+    border-top:none;
+    border-right: none;
+    transform:rotate(45deg); 
 }

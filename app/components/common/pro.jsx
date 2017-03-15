@@ -1,17 +1,17 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { hashHistory } from 'react-router'
 
 class Pro extends React.Component {
 	constructor(){
 		super()
 	}
-	handelClick(){
-		console.log(121)
+	handelClick(id){
+		hashHistory.push('/detail/'+id)
 	}
 	render(){
 		let props = this.props.data;
 		return(
-			<li className="pro" onClick={this.handelClick.bind(this)}>
+			<li className="pro" onClick={this.handelClick.bind(this,props.id)}>
 				<div className="pro-img" >
 					<img src={'https://fuss10.elemecdn.com/'+props.image_path.replace(/(\S\S\S)/,"$1/").replace(/(\S)/,"$1/").replace(/(jpeg|png)/,"$1.$1")} />
 				</div>

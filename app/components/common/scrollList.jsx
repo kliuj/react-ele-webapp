@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
 
 const height = window.screen.height;
 let timeOut = null
@@ -20,7 +19,6 @@ class List extends React.Component {
 		}, 200);
 	}
 	componentWillUnmount(){
-		console.log(1212)
 		window.removeEventListener('scroll',this.scrollLoad)
 	}
 	loadMore(){
