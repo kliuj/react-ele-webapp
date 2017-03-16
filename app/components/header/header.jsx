@@ -1,13 +1,15 @@
 import React from 'react'
-import { hashHistory } from 'react-router'
+import { hashHistory} from 'react-router'
+import {saveFrom,getBack} from '../../utils/baseStore.js'
+import {utilBack} from '../../utils/back.js'
 
 export class Header extends React.Component{
 	constructor(props) {
 		super(props);
-		
+		saveFrom(this.props)
 	}
 	goback(){
-		hashHistory.push('/')
+		utilBack(this.props)
 	}
 	render(){
 		return(
