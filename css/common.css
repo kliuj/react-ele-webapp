@@ -7,13 +7,13 @@ header{
   display: -ms-flexbox;
   display: flex;
   background-color: #0096ff;
-  height: 40px	; 
+  height: 40px	;
 }
 header p{
-  color:#fff;  
+  color:#fff;
   line-height: 40px;
   text-align: center;
-  padding: 0 40px; 
+  padding: 0 40px;
   width: 100%
 }
 footer{
@@ -136,5 +136,12 @@ footer a{
     border:2px solid #fff;
     border-top:none;
     border-right: none;
-    transform:rotate(45deg); 
+    transform:rotate(45deg);
+}
+.shop{
+  color:#666;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
 }
