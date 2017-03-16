@@ -30,11 +30,11 @@ class Home extends React.Component{
 		return(
 			<div>
 				<div className="head-box">
-					<input placeholder="搜索商家、商品" />
+					<input placeholder="搜索商家、商品" className="input-arae"/>
 				</div>
 				<div className="content">
 					<h3 className="hot-title">推荐商家</h3>
-					<List 
+					<List
 						list={Pro}
 						data={this.state.productList}
 						onScroll = {this.getMore.bind(this)}

@@ -1,6 +1,7 @@
 *{margin:0;padding: 0;box-sizing: border-box;font-family:  Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;}
-html{font-size: 16px}
+html,body{font-size: 16px;width: 100%;height: 100%;background-color: #f4f4f4}
 a{text-decoration:none;}
+input{outline: none}
 header{
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +50,7 @@ footer a{
   right: 0;
   z-index: 10;
  }
-.head-box input{
+.input-arae{
 	height: 30px;
 	border-radius: 8px;
 	border:none;
@@ -79,6 +80,7 @@ footer a{
     align-items: center;
     padding:5px 10px;
     border-bottom: 1px solid #eee;
+    background-color: #fff
 }
 .pro-img{
 	position: relative;
@@ -144,4 +146,32 @@ footer a{
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #ddd;
+}
+.input-box{
+  background-color: #f4f4f4;
+  padding: 20px 0px;
+}
+.input-box input{
+  margin: 0.5px auto;
+  padding-left: 20px;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border:none;
+}
+.login-btn{
+  width: 90%;
+height: 40px;
+border: none;
+position: relative;
+margin: 10px 5%;
+outline: none;
+background-color: #4cd964;;
+line-height: 40px;
+text-align: center;
+color:#fff;
+font-size: 18px
+}
+.login-btn:active{
+  background-color: #189E2F
 }

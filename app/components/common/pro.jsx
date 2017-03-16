@@ -6,7 +6,7 @@ class Pro extends React.Component {
 		super()
 	}
 	handelClick(id){
-		hashHistory.push('/detail/'+id)
+		hashHistory.push('/detail/'+id+'?qhfrom=home')
 	}
 	render(){
 		let props = this.props.data;
@@ -28,7 +28,7 @@ class Pro extends React.Component {
 							<span>
 					          {props.piecewise_agent_fee && props.piecewise_agent_fee.rules.length > 1 ? props.piecewise_agent_fee.tips : props.piecewise_agent_fee.description}
 					        </span>
-					     </div>   
+					     </div>
 					</div>
 				</div>
 			</li>

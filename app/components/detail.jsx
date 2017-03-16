@@ -41,7 +41,7 @@ class Detail extends React.Component{
 		}
 		return (
 			<div>
-				<Header title={this.state.detail ? this.state.detail.name : '餐厅详情' }/>
+				<Header title={this.state.detail ? this.state.detail.name : '餐厅详情' }  pagename={'detail'} {...this.props}/>
 				{ detailInfo}
 			</div>
 		)

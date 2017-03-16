@@ -14,9 +14,9 @@ const App = React.createClass({
       <div>
         <footer>
         	<Link to="/home">外卖</Link>
-        	<Link to="/discover">发现</Link>
-        	<Link to="/booklist">订单</Link>
-        	<Link to="/user">我的</Link>
+        	<Link to="/discover?qhfrom=home">发现</Link>
+        	<Link to="/booklist?qhfrom=home">订单</Link>
+        	<Link to="/user" query={{ qhfrom : "home"}}>我的</Link>
         </footer>
         {this.props.children}
       </div>
@@ -27,13 +27,13 @@ const App = React.createClass({
 const route = (
 <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} /> 
+      <IndexRoute component={Home} />
       <Route path="home" component={Home} />
       <Route path="discover" component={Discover} />
       <Route path="booklist" component={Booklist} />
       <Route path="user" component={User} />
     </Route>
-    <Route path="/detail/:id" component={Detail}></Route>
+    <Route path="/detail/:id"  component={Detail}></Route>
   </Router>
 )
 
