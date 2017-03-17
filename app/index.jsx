@@ -17,8 +17,6 @@ const App = React.createClass({
       <div>
         <footer>
         	<Link to="/home">外卖</Link>
-        	<Link to="/discover?qhfrom=home">发现</Link>
-        	<Link to="/booklist?qhfrom=home">订单</Link>
         	<Link to={{pathname:'user',query:{ qhfrom : "home"}, hash:'#user',}}>我的</Link>
         </footer>
         {this.props.children}
