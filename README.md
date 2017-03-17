@@ -37,7 +37,7 @@ redux中文文档：http://cn.redux.js.org/
 >3:公共方法的处理:baseFun.js  主要用来定义一些公用的模块方法    
 
 ##使用react-router初始化页面
->    ...
+    ...
         import React from 'react'
         import { render } from 'react-dom'
         import { Router, Route, Link,hashHistory ,IndexRedirect,IndexRoute} from 'react-router'
