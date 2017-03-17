@@ -1,3 +1,14 @@
-import { createStore } from 'redux';
-const store = createStore(fn);
-const state = store.getState();
+'use strict'
+
+import {createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
+import rootReducer from '../reducers/index.js'
+
+
+const middlewares = [thunk]
+const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore)
+
+export default function configureStore(initialState){
+	return createStoreWithMiddleware(rootReducer,initialState)
+}
+

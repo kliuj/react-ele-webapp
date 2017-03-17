@@ -27,6 +27,10 @@ export function   getTimeStore(name){
         return {}
       }
   }
+//删除信息   
+export function deleteStore(name){
+   localStorage.removeItem(name)
+}
 // 自动存储浏览记录
 export function  saveFrom(prop) {
       let name = prop.pagename,

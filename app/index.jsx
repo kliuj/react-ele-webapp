@@ -1,12 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link,hashHistory ,IndexRedirect,IndexRoute,browserHistory} from 'react-router'
+import { Router, Route, Link,hashHistory ,IndexRedirect,IndexRoute} from 'react-router'
+import {Provider} from 'react-redux'
+
 
 import Home from './components/home.jsx'
 import Discover from './components/discover.jsx'
 import Booklist from './components/booklist.jsx'
 import User from './components/user.jsx'
 import Detail from './components/detail.jsx'
+import configureStore from './store/store.js'
 
 const App = React.createClass({
   render() {
@@ -24,17 +27,21 @@ const App = React.createClass({
   }
 })
 
+const store = configureStore()
+
 const route = (
-<Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={Home} />
-      <Route path="home" component={Home} />
-      <Route path="discover" component={Discover} />
-      <Route path="booklist" component={Booklist} />
-      <Route path="user" component={User} />
-    </Route>
-    <Route path="/detail/:id"  component={Detail}></Route>
-  </Router>
+  <Provider store={store}>
+      <Router history={hashHistory}>
+          <Route path="/" component={App}>
+            <IndexRoute component={Home} />
+            <Route path="home" component={Home} />
+            <Route path="discover" component={Discover} />
+            <Route path="booklist" component={Booklist} />
+            <Route path="user" component={User} />
+          </Route>
+          <Route path="/detail/:id"  component={Detail}></Route>
+      </Router>
+  </Provider>
 )
 
 render(route, document.getElementById("app"))
