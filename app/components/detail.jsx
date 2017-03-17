@@ -11,7 +11,6 @@ class Detail extends React.Component{
 	}
 	componentWillMount() {
 		Send('restaurant',null,(data)=>{
-			console.log(data)
 			this.setState({
 				detail:data
 			})

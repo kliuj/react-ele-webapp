@@ -1,3 +1,4 @@
+'use strict';
 /*封装localStorage*/
 
 //存储信息有效期
