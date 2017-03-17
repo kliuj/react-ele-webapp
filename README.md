@@ -39,6 +39,7 @@
 >2:本地数据缓存维护：`baseStore.js`  主要处理页面之间的跳转返回，增加更多的自主性和扩展性
 >3:公共方法的处理:`baseFun.js`  主要用来定义一些公用的模块方法    
 
+
 ## 使用react-router初始化页面
 >
        ``` import React from 'react'
@@ -69,6 +70,7 @@
                                    </Router>
                              )
                              render(route, document.getElementById("app"))```
+
 代码简单介绍：
 因为没有后台，采用的 `hashHistory` （`hash`路由），关于`hash`路由可以参考：https://github.com/kliuj/spa-routers 有简单的介绍。
 
