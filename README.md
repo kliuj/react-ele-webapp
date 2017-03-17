@@ -1,10 +1,10 @@
 # react-ele-webapp
 
 ## run 
-下载完项目
-`npm install`
-然后
-`npm run dev` 即可 
+下载完项目<br>
+`npm install`<br>
+然后<br>
+`npm run dev` 即可 <br>
 基于 `react  react-router  redux` 的项目，主要是为了学习实战`react`。数据都是固定的，从饿了么接口临时抓的，模拟了一个`0-100ms`的异步数据延迟，感谢饿了么。
 
 以下内容是项目开发的过程和一些思考，按照这个过程至少能保证实现一个相对完整的`react`全家桶项目
