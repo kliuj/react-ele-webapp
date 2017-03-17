@@ -34,7 +34,7 @@ class List extends React.Component {
 			<div ref="scrollContent" id="scrollContent">
 			  {
 			  	this.props.data.map((item,i)=>{
-			  		return <L data={item} key={i}/>
+			  		return <L data={item} key={i} pagename={this.props.pagename}/>
 			  	})
 			  }
 			</div>

@@ -6,7 +6,7 @@ class Pro extends React.Component {
 		super()
 	}
 	handelClick(id){
-		hashHistory.push('/detail/'+id+'?qhfrom=home')
+		hashHistory.push('/detail/'+id+'?qhfrom='+this.props.pagename)
 	}
 	render(){
 		let props = this.props.data;

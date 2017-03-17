@@ -7,7 +7,6 @@ const initialData = {
 }
 
 export default function(state = initialData,action){
-	console.log(action.type)
 	switch(action.type){
 		case actionTypes.LOG_SUCCESS:
 			return {

@@ -9,6 +9,7 @@ import Discover from './components/discover.jsx'
 import Booklist from './components/booklist.jsx'
 import User from './components/user.jsx'
 import Detail from './components/detail.jsx'
+import SearchList from './components/searchList.jsx'
 import configureStore from './store/store.js'
 
 const App = React.createClass({
@@ -38,6 +39,7 @@ const route = (
             <Route path="user" component={User} />
           </Route>
           <Route path="/detail/:id"  component={Detail}></Route>
+          <Route path="/searchlist"  component={SearchList}></Route>
       </Router>
   </Provider>
 )
