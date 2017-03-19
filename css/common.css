@@ -1,6 +1,9 @@
 *{margin:0;padding: 0;box-sizing: border-box;font-family:  Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;}
 html,body{font-size: 16px;width: 100%;height: 100%;background-color: #f4f4f4}
 a{text-decoration:none;}
+input:-webkit-autofill {
+background-color: #fff ;
+}
 input{outline: none}
 header{
   display: -webkit-box;
@@ -186,4 +189,33 @@ font-size: 18px
   height: 50px;
   line-height: 50px;
   text-align: center;
+}
+.mask{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2000
+}
+.loading{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  margin: -20px 0  0 -20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  animation:rotateing 1s linear infinite;
+}
+@keyframes  rotateing {
+  0%{
+     transform:rotate(0deg);
+  }
+  100%{
+     transform:rotate(360deg);
+  }
 }

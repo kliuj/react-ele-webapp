@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import * as actions from '../../const/actionTypes.js'
 import {log_in} from '../../actions/login.js'
 
+import Mask from '../common/mask.jsx'
 
 
 class Login extends React.Component{
@@ -31,6 +32,7 @@ class Login extends React.Component{
 		        <input placeholder="用户名：随便输入"  type="text" onInput={(e)=>{this.setState({username:e.target.value})}}/>
 		        <input placeholder="密码：随便输入" type="password" onInput={(e)=>{this.setState({password:e.target.value})}}/>
 		        <button className="login-btn" onClick={this.goLogin.bind(this)}>{this.props.loginstate === 0 ? '登录' :'正在登录'}</button>
+            {this.props.loginstate !== 0 &&	<Mask />}
 			</div>
 		)
 	}
