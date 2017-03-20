@@ -219,3 +219,38 @@ font-size: 18px
      transform:rotate(360deg);
   }
 }
+.message-box{
+  width: 280px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -140px;
+  background-color: #fff;
+  height: 100px;
+  color:#099fde
+}
+.message-box p {
+  height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #999;
+  line-height: 60px;
+}
+.message-box .ok-btn:active,.message-box .cancel-btn:active{
+  background-color: #4cd964
+}
+.message-box .ok-btn{
+  width: 140px;
+  float: left;
+  border-right: 1px solid #999;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.message-box .cancel-btn{
+  width: 140px;
+  margin-left: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}

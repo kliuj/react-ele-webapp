@@ -15,7 +15,7 @@ export default class Mask extends React.Component {
   render(){
     return (
         <div className="mask" style={{height:this.state.height+'px'}}>
-          <i className="loading"></i>
+          {<this.props.content  {...this.props}/>}
         </div>
     )
   }
