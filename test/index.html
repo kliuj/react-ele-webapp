@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        input{
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            top:0;
+            left:0;
+            border: 1px solid #333;
+
+        }
+        div{
+            height: 100px;
+            border:1px solid red;
+            -webkit-overflow-scrolling:touch;
+            margin-top: 50px;
+            overflow-y: scroll;
+        }
+        span{
+            display: block;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+<input >
+<div id="test">
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+    <span>test</span>
+</div>
+<script>
+    var _height = window.innerHeight - 50;
+    document.getElementById("test").setAttribute("style","height:"+_height+"px")
+</script>
+</body>
+</html>
